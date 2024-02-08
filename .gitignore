@@ -1,0 +1,6 @@
+output.
+bin
+build
+.vscode
+.cache
+merge.py
