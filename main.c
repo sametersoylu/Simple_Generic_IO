@@ -1,5 +1,6 @@
 #include "SysIO.h"
 #include "Sum.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
@@ -17,14 +18,9 @@ char * init_str(size_t size) {
 }
 
 int main() {
-    char * str = init_str(1024);
-    _read(str); 
-    _print_f("You entered: %s\n", str);
-    int x = 0, y = 0;
-    _print_f("Enter two numbers: ");    
-    _read(&x); _read(&y);
-    _print_f("Sum: %d", sum(x,y));
-
+    float f = -3.1445;  
+    _write(f);
+    _print_f("\nFloat .4f = %.4f\n", f); 
 
     return 0; 
 }
